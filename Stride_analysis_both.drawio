@@ -1,0 +1,418 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36">
+  <diagram name="Sida-1" id="Tt4gBpDOqTlhxv1sfL5X">
+    <mxGraphModel dx="3882" dy="1672" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0" adaptiveColors="simple">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="AGWlZGKlPDsCxdq650jD-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#bac8d3;strokeColor=#23445d;" value="Admin / CI-CD" vertex="1">
+          <mxGeometry height="60" width="120" x="-600" y="39" as="geometry" />
+        </mxCell>
+        <mxCell id="AGWlZGKlPDsCxdq650jD-5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#bac8d3;strokeColor=#23445d;" value="Workload A" vertex="1">
+          <mxGeometry height="60" width="120" x="-726" y="537" as="geometry" />
+        </mxCell>
+        <mxCell id="AGWlZGKlPDsCxdq650jD-6" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#bac8d3;strokeColor=#23445d;" value="Workload B" vertex="1">
+          <mxGeometry height="60" width="120" x="-471.5" y="537" as="geometry" />
+        </mxCell>
+        <mxCell id="AGWlZGKlPDsCxdq650jD-7" edge="1" parent="1" source="AGWlZGKlPDsCxdq650jD-1" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fillColor=#bac8d3;strokeColor=#23445d;" target="AGWlZGKlPDsCxdq650jD-13" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="-749" y="227" as="sourcePoint" />
+            <mxPoint x="-540" y="188" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AGWlZGKlPDsCxdq650jD-8" connectable="0" parent="AGWlZGKlPDsCxdq650jD-7" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="API Requests" vertex="1">
+          <mxGeometry relative="1" x="-0.1884" y="-1" as="geometry">
+            <mxPoint x="1" y="16" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AGWlZGKlPDsCxdq650jD-9" edge="1" parent="1" source="AGWlZGKlPDsCxdq650jD-13" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fillColor=#bac8d3;strokeColor=#23445d;" target="AGWlZGKlPDsCxdq650jD-16" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="-268" y="484" as="sourcePoint" />
+            <mxPoint x="-540" y="322" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AGWlZGKlPDsCxdq650jD-10" connectable="0" parent="AGWlZGKlPDsCxdq650jD-9" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Store/Retrieve Secret" vertex="1">
+          <mxGeometry relative="1" x="-0.25" y="2" as="geometry">
+            <mxPoint x="13" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AGWlZGKlPDsCxdq650jD-11" edge="1" parent="1" source="AGWlZGKlPDsCxdq650jD-14" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;fillColor=#bac8d3;strokeColor=#23445d;" target="AGWlZGKlPDsCxdq650jD-13" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="-322" y="487" as="sourcePoint" />
+            <mxPoint x="-540" y="382" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AGWlZGKlPDsCxdq650jD-15" connectable="0" parent="AGWlZGKlPDsCxdq650jD-11" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Request Secret (SA Auth)" vertex="1">
+          <mxGeometry relative="1" x="-0.1034" as="geometry">
+            <mxPoint y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AGWlZGKlPDsCxdq650jD-13" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#bac8d3;strokeColor=#23445d;" value="K8s API Server" vertex="1">
+          <mxGeometry height="80" width="80" x="-580" y="184" as="geometry" />
+        </mxCell>
+        <mxCell id="AGWlZGKlPDsCxdq650jD-14" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#bac8d3;strokeColor=#23445d;" value="Kubelet" vertex="1">
+          <mxGeometry height="80" width="80" x="-580" y="357" as="geometry" />
+        </mxCell>
+        <mxCell id="AGWlZGKlPDsCxdq650jD-16" parent="1" style="shape=partialRectangle;whiteSpace=wrap;html=1;left=0;right=0;fillColor=#bac8d3;strokeColor=#23445d;" value="etcd" vertex="1">
+          <mxGeometry height="60" width="120" x="-311" y="194" as="geometry" />
+        </mxCell>
+        <mxCell id="AGWlZGKlPDsCxdq650jD-17" edge="1" parent="1" source="AGWlZGKlPDsCxdq650jD-5" style="endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fillColor=#bac8d3;strokeColor=#23445d;" target="AGWlZGKlPDsCxdq650jD-6" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="82.5" y="500" as="sourcePoint" />
+            <mxPoint x="132.5" y="450" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AGWlZGKlPDsCxdq650jD-18" connectable="0" parent="AGWlZGKlPDsCxdq650jD-17" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="TLS" vertex="1">
+          <mxGeometry relative="1" x="0.0075" y="-1" as="geometry">
+            <mxPoint x="-4" y="-1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AGWlZGKlPDsCxdq650jD-19" edge="1" parent="1" style="endArrow=none;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;fillColor=#bac8d3;strokeColor=#23445d;" target="AGWlZGKlPDsCxdq650jD-14" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="-540" y="480" as="sourcePoint" />
+            <mxPoint x="-477" y="427" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AGWlZGKlPDsCxdq650jD-20" edge="1" parent="1" style="endArrow=none;html=1;rounded=0;fillColor=#bac8d3;strokeColor=#23445d;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="-540" y="480" as="sourcePoint" />
+            <mxPoint x="-412" y="480" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AGWlZGKlPDsCxdq650jD-24" connectable="0" parent="AGWlZGKlPDsCxdq650jD-20" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Push secret" vertex="1">
+          <mxGeometry relative="1" x="0.1094" y="-2" as="geometry">
+            <mxPoint x="-9" y="-3" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AGWlZGKlPDsCxdq650jD-21" edge="1" parent="1" style="endArrow=none;html=1;rounded=0;fillColor=#bac8d3;strokeColor=#23445d;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="-666" y="480" as="sourcePoint" />
+            <mxPoint x="-538" y="480" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AGWlZGKlPDsCxdq650jD-25" connectable="0" parent="AGWlZGKlPDsCxdq650jD-21" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Push secret" vertex="1">
+          <mxGeometry relative="1" x="-0.0469" y="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AGWlZGKlPDsCxdq650jD-22" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fillColor=#bac8d3;strokeColor=#23445d;" target="AGWlZGKlPDsCxdq650jD-5" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="-666" y="480" as="sourcePoint" />
+            <mxPoint x="135" y="425" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AGWlZGKlPDsCxdq650jD-23" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fillColor=#bac8d3;strokeColor=#23445d;" target="AGWlZGKlPDsCxdq650jD-6" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="-412" y="480" as="sourcePoint" />
+            <mxPoint x="-267" y="488" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dfhoU_2vwt9XX_zdc73l-7" parent="1" style="text;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;rounded=0;" value="External Boundary" vertex="1">
+          <mxGeometry height="30" width="60" x="-779" y="-12" as="geometry" />
+        </mxCell>
+        <mxCell id="dfhoU_2vwt9XX_zdc73l-8" parent="1" style="text;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;rounded=0;" value="Storage Boundary" vertex="1">
+          <mxGeometry height="30" width="60" x="-229" y="48" as="geometry" />
+        </mxCell>
+        <mxCell id="dfhoU_2vwt9XX_zdc73l-9" parent="1" style="text;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;rounded=0;" value="Node Boundary" vertex="1">
+          <mxGeometry height="30" width="60" x="-790" y="488" as="geometry" />
+        </mxCell>
+        <mxCell id="JOWMSStrGXTOawPJg4Or-12" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="Admin / CI-CD" vertex="1">
+          <mxGeometry height="90" width="628" x="-1578" y="-183" as="geometry" />
+        </mxCell>
+        <mxCell id="JOWMSStrGXTOawPJg4Or-13" parent="JOWMSStrGXTOawPJg4Or-12" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="S: Credentials can be stolen in order to access the API server and subsequently the etcd, where secrets are stored" vertex="1">
+          <mxGeometry height="30" width="628" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="JOWMSStrGXTOawPJg4Or-16" parent="JOWMSStrGXTOawPJg4Or-12" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="R: If logging is not properly configured, repudiation is a risk" vertex="1">
+          <mxGeometry height="30" width="628" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="JOWMSStrGXTOawPJg4Or-27" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="K8s API Server" vertex="1">
+          <mxGeometry height="90" width="628" x="-1578" y="-60" as="geometry" />
+        </mxCell>
+        <mxCell id="JOWMSStrGXTOawPJg4Or-29" parent="JOWMSStrGXTOawPJg4Or-27" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="T: Using API commands to alter, delete, or add secrets to etcd" vertex="1">
+          <mxGeometry height="30" width="628" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="JOWMSStrGXTOawPJg4Or-30" parent="JOWMSStrGXTOawPJg4Or-27" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="R: If logging is not properly configured, repudiation is a risk" vertex="1">
+          <mxGeometry height="30" width="628" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="JOWMSStrGXTOawPJg4Or-32" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="etcd" vertex="1">
+          <mxGeometry height="150" width="628" x="-1578" y="59" as="geometry" />
+        </mxCell>
+        <mxCell id="JOWMSStrGXTOawPJg4Or-34" parent="JOWMSStrGXTOawPJg4Or-32" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="T: Stored secrets can be directly altered, deleted or added" vertex="1">
+          <mxGeometry height="30" width="628" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="JOWMSStrGXTOawPJg4Or-35" parent="JOWMSStrGXTOawPJg4Or-32" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="R: If logging is not properly configured, repudiation is a risk" vertex="1">
+          <mxGeometry height="30" width="628" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="JOWMSStrGXTOawPJg4Or-36" parent="JOWMSStrGXTOawPJg4Or-32" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="&amp;nbsp;I: Secrets can be exposed and read" vertex="1">
+          <mxGeometry height="30" width="628" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="JOWMSStrGXTOawPJg4Or-37" parent="JOWMSStrGXTOawPJg4Or-32" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="&amp;nbsp;D: Deleting or corrupting stored secrets can affect availability" vertex="1">
+          <mxGeometry height="30" width="628" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="JOWMSStrGXTOawPJg4Or-38" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="Kubelet" vertex="1">
+          <mxGeometry height="120" width="628" x="-1578" y="237" as="geometry" />
+        </mxCell>
+        <mxCell id="JOWMSStrGXTOawPJg4Or-40" parent="JOWMSStrGXTOawPJg4Or-38" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="R: If logging is not properly configured, repudiation is a risk" vertex="1">
+          <mxGeometry height="30" width="628" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="JOWMSStrGXTOawPJg4Or-41" parent="JOWMSStrGXTOawPJg4Or-38" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="&amp;nbsp;I: Secrets can be exposed and read" vertex="1">
+          <mxGeometry height="30" width="628" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="JOWMSStrGXTOawPJg4Or-42" parent="JOWMSStrGXTOawPJg4Or-38" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="&amp;nbsp;D: Deleting or corrupting stored secrets can affect availability" vertex="1">
+          <mxGeometry height="30" width="628" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="JOWMSStrGXTOawPJg4Or-44" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="Workload" vertex="1">
+          <mxGeometry height="180" width="628" x="-1578" y="387" as="geometry" />
+        </mxCell>
+        <mxCell id="JOWMSStrGXTOawPJg4Or-49" parent="JOWMSStrGXTOawPJg4Or-44" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="T: S&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;ecrets can be directly altered, deleted or added&lt;/span&gt;" vertex="1">
+          <mxGeometry height="30" width="628" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="JOWMSStrGXTOawPJg4Or-50" parent="JOWMSStrGXTOawPJg4Or-44" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="&amp;nbsp;I: Secrets can be exposed and read" vertex="1">
+          <mxGeometry height="30" width="628" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="JOWMSStrGXTOawPJg4Or-51" parent="JOWMSStrGXTOawPJg4Or-44" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="R: If logging is not properly configured, repudiation is a risk" vertex="1">
+          <mxGeometry height="30" width="628" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="JOWMSStrGXTOawPJg4Or-53" parent="JOWMSStrGXTOawPJg4Or-44" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="D: A compromised workload can potentially crash the workload" vertex="1">
+          <mxGeometry height="30" width="628" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="JOWMSStrGXTOawPJg4Or-52" parent="JOWMSStrGXTOawPJg4Or-44" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="E: Shell can potentially be escaped, granting access to the entire node" vertex="1">
+          <mxGeometry height="30" width="628" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="mtP42j5BZ-0bhSF3e_x6-4" edge="1" parent="1" style="endArrow=none;dashed=1;html=1;strokeWidth=2;rounded=0;curved=1;strokeColor=#FF3B3B;fillColor=#bac8d3;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="-554.5" y="247" />
+            </Array>
+            <mxPoint x="-795.5" y="7" as="sourcePoint" />
+            <mxPoint x="-284.5" y="7" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mtP42j5BZ-0bhSF3e_x6-5" edge="1" parent="1" style="endArrow=none;dashed=1;html=1;strokeWidth=2;rounded=0;curved=1;strokeColor=#FF3B3B;fillColor=#bac8d3;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="-453" y="237" />
+            </Array>
+            <mxPoint x="-212" y="21" as="sourcePoint" />
+            <mxPoint x="-245" y="465" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mtP42j5BZ-0bhSF3e_x6-6" edge="1" parent="1" style="endArrow=none;dashed=1;html=1;strokeWidth=2;rounded=0;curved=1;strokeColor=#FF3B3B;fillColor=#bac8d3;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="-538.5" y="194" />
+            </Array>
+            <mxPoint x="-795.5" y="497" as="sourcePoint" />
+            <mxPoint x="-284.5" y="497" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mtP42j5BZ-0bhSF3e_x6-7" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#bac8d3;strokeColor=#23445d;" value="Admin / CI-CD" vertex="1">
+          <mxGeometry height="60" width="120" x="-506.5" y="816" as="geometry" />
+        </mxCell>
+        <mxCell id="mtP42j5BZ-0bhSF3e_x6-8" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#bac8d3;strokeColor=#23445d;" value="Workload A" vertex="1">
+          <mxGeometry height="60" width="120" x="-633.75" y="1466" as="geometry" />
+        </mxCell>
+        <mxCell id="mtP42j5BZ-0bhSF3e_x6-9" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#bac8d3;strokeColor=#23445d;" value="Workload B" vertex="1">
+          <mxGeometry height="60" width="120" x="-379.25" y="1466" as="geometry" />
+        </mxCell>
+        <mxCell id="mtP42j5BZ-0bhSF3e_x6-10" edge="1" parent="1" source="mtP42j5BZ-0bhSF3e_x6-7" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fillColor=#bac8d3;strokeColor=#23445d;" target="mtP42j5BZ-0bhSF3e_x6-16" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="-655.5" y="1004" as="sourcePoint" />
+            <mxPoint x="-446.5" y="965" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mtP42j5BZ-0bhSF3e_x6-11" connectable="0" parent="mtP42j5BZ-0bhSF3e_x6-10" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="API Requests" vertex="1">
+          <mxGeometry relative="1" x="-0.1884" y="-1" as="geometry">
+            <mxPoint x="1" y="16" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mtP42j5BZ-0bhSF3e_x6-14" edge="1" parent="1" source="mtP42j5BZ-0bhSF3e_x6-17" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;fillColor=#bac8d3;strokeColor=#23445d;" target="mtP42j5BZ-0bhSF3e_x6-16" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="-228.5" y="1264" as="sourcePoint" />
+            <mxPoint x="-446.5" y="1159" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mtP42j5BZ-0bhSF3e_x6-15" connectable="0" parent="mtP42j5BZ-0bhSF3e_x6-14" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Request Secret (SA Auth)" vertex="1">
+          <mxGeometry relative="1" x="-0.1034" as="geometry">
+            <mxPoint y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mtP42j5BZ-0bhSF3e_x6-16" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#bac8d3;strokeColor=#23445d;" value="K8s API Server" vertex="1">
+          <mxGeometry height="80" width="80" x="-486.5" y="961" as="geometry" />
+        </mxCell>
+        <mxCell id="mtP42j5BZ-0bhSF3e_x6-17" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#bac8d3;strokeColor=#23445d;" value="Kubelet" vertex="1">
+          <mxGeometry height="80" width="80" x="-486.5" y="1134" as="geometry" />
+        </mxCell>
+        <mxCell id="mtP42j5BZ-0bhSF3e_x6-35" edge="1" parent="1" source="mtP42j5BZ-0bhSF3e_x6-37" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;fillColor=#bac8d3;strokeColor=#23445d;" target="mtP42j5BZ-0bhSF3e_x6-16">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-706" y="1001" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mtP42j5BZ-0bhSF3e_x6-36" connectable="0" parent="mtP42j5BZ-0bhSF3e_x6-35" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Token review" vertex="1">
+          <mxGeometry relative="1" x="0.0377" as="geometry">
+            <mxPoint x="1" y="-1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mtP42j5BZ-0bhSF3e_x6-19" edge="1" parent="1" style="endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fillColor=#bac8d3;strokeColor=#23445d;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="-514.75" y="1496" as="sourcePoint" />
+            <mxPoint x="-380.25" y="1496" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mtP42j5BZ-0bhSF3e_x6-20" connectable="0" parent="mtP42j5BZ-0bhSF3e_x6-19" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="mTLS" vertex="1">
+          <mxGeometry relative="1" x="0.0075" y="-1" as="geometry">
+            <mxPoint x="-2" y="-3" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mtP42j5BZ-0bhSF3e_x6-28" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="External Boundary" vertex="1">
+          <mxGeometry height="30" width="60" x="-685.5" y="765" as="geometry" />
+        </mxCell>
+        <mxCell id="mtP42j5BZ-0bhSF3e_x6-30" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Node Boundary" vertex="1">
+          <mxGeometry height="30" width="60" x="-696.5" y="1265" as="geometry" />
+        </mxCell>
+        <mxCell id="mtP42j5BZ-0bhSF3e_x6-31" edge="1" parent="1" style="endArrow=none;dashed=1;html=1;strokeWidth=2;rounded=0;curved=1;strokeColor=#FF3B3B;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="-461" y="1024" />
+            </Array>
+            <mxPoint x="-702" y="784" as="sourcePoint" />
+            <mxPoint x="-191" y="784" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mtP42j5BZ-0bhSF3e_x6-32" edge="1" parent="1" style="endArrow=none;dashed=1;html=1;strokeWidth=2;rounded=0;curved=1;strokeColor=#FF3B3B;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="-550" y="1017" />
+            </Array>
+            <mxPoint x="-764" y="806" as="sourcePoint" />
+            <mxPoint x="-776" y="1239" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mtP42j5BZ-0bhSF3e_x6-33" edge="1" parent="1" style="endArrow=none;dashed=1;html=1;strokeWidth=2;rounded=0;curved=1;strokeColor=#FF3B3B;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="-445" y="971" />
+            </Array>
+            <mxPoint x="-702" y="1274" as="sourcePoint" />
+            <mxPoint x="-191" y="1274" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mtP42j5BZ-0bhSF3e_x6-34" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="External Boundary" vertex="1">
+          <mxGeometry height="30" width="60" x="-813" y="831" as="geometry" />
+        </mxCell>
+        <mxCell id="mtP42j5BZ-0bhSF3e_x6-37" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#bac8d3;strokeColor=#23445d;" value="Spire Server" vertex="1">
+          <mxGeometry height="60" width="120" x="-816.5" y="971" as="geometry" />
+        </mxCell>
+        <mxCell id="mtP42j5BZ-0bhSF3e_x6-39" edge="1" parent="1" source="mtP42j5BZ-0bhSF3e_x6-38" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;fillColor=#bac8d3;strokeColor=#23445d;" target="mtP42j5BZ-0bhSF3e_x6-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="mtP42j5BZ-0bhSF3e_x6-40" connectable="0" parent="mtP42j5BZ-0bhSF3e_x6-39" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Workload metadata request" vertex="1">
+          <mxGeometry relative="1" x="0.0444" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mtP42j5BZ-0bhSF3e_x6-38" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#bac8d3;strokeColor=#23445d;" value="Spire Agent" vertex="1">
+          <mxGeometry height="60" width="120" x="-506.5" y="1314" as="geometry" />
+        </mxCell>
+        <mxCell id="mtP42j5BZ-0bhSF3e_x6-43" edge="1" parent="1" source="mtP42j5BZ-0bhSF3e_x6-8" style="endArrow=classic;html=1;rounded=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;fillColor=#bac8d3;strokeColor=#23445D;" target="mtP42j5BZ-0bhSF3e_x6-38" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="-778" y="1452" as="sourcePoint" />
+            <mxPoint x="-728" y="1402" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mtP42j5BZ-0bhSF3e_x6-44" connectable="0" parent="mtP42j5BZ-0bhSF3e_x6-43" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Workload API" vertex="1">
+          <mxGeometry relative="1" x="-0.0398" y="-2" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mtP42j5BZ-0bhSF3e_x6-45" edge="1" parent="1" source="mtP42j5BZ-0bhSF3e_x6-9" style="endArrow=classic;html=1;rounded=0;entryX=0.75;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;fillColor=#bac8d3;strokeColor=#23445d;" target="mtP42j5BZ-0bhSF3e_x6-38" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="-499" y="1599" as="sourcePoint" />
+            <mxPoint x="-401" y="1471" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mtP42j5BZ-0bhSF3e_x6-46" connectable="0" parent="mtP42j5BZ-0bhSF3e_x6-45" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Workload API" vertex="1">
+          <mxGeometry relative="1" x="-0.0398" y="-2" as="geometry">
+            <mxPoint y="3" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="z66lALgW-fK6b9CqXL-4-1" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="Admin / CI-CD" vertex="1">
+          <mxGeometry height="90" width="635.5" x="-1590" y="778" as="geometry" />
+        </mxCell>
+        <mxCell id="z66lALgW-fK6b9CqXL-4-2" parent="z66lALgW-fK6b9CqXL-4-1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="S:&amp;nbsp;Credentials can be stolen in order to access the API server and subsequently the etcd, where secrets are stored" vertex="1">
+          <mxGeometry height="30" width="635.5" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="z66lALgW-fK6b9CqXL-4-3" parent="z66lALgW-fK6b9CqXL-4-1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="R:&amp;nbsp;If logging is not properly configured, repudiation is a risk" vertex="1">
+          <mxGeometry height="30" width="635.5" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="z66lALgW-fK6b9CqXL-4-4" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="K8s API Server" vertex="1">
+          <mxGeometry height="90" width="635.5" x="-1589" y="884" as="geometry" />
+        </mxCell>
+        <mxCell id="z66lALgW-fK6b9CqXL-4-5" parent="z66lALgW-fK6b9CqXL-4-4" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="T:&amp;nbsp;Using API commands to alter, delete, or add workload registration entries" vertex="1">
+          <mxGeometry height="30" width="635.5" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="z66lALgW-fK6b9CqXL-4-6" parent="z66lALgW-fK6b9CqXL-4-4" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="R:&amp;nbsp;If logging is not properly configured, repudiation is a risk" vertex="1">
+          <mxGeometry height="30" width="635.5" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="z66lALgW-fK6b9CqXL-4-7" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="Kubelet" vertex="1">
+          <mxGeometry height="60" width="635.5" x="-1590" y="999" as="geometry" />
+        </mxCell>
+        <mxCell id="z66lALgW-fK6b9CqXL-4-8" parent="z66lALgW-fK6b9CqXL-4-7" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="R:&amp;nbsp;If logging is not properly configured, repudiation is a risk" vertex="1">
+          <mxGeometry height="30" width="635.5" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="z66lALgW-fK6b9CqXL-4-9" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="Workload" vertex="1">
+          <mxGeometry height="124" width="636" x="-1589" y="1088" as="geometry" />
+        </mxCell>
+        <mxCell id="z66lALgW-fK6b9CqXL-4-10" parent="z66lALgW-fK6b9CqXL-4-9" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="R: If logging is not properly configured, repudiation is a risk" vertex="1">
+          <mxGeometry height="30" width="636" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="z66lALgW-fK6b9CqXL-4-11" parent="z66lALgW-fK6b9CqXL-4-9" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="D: A compromised workload can potentially crash the workload" vertex="1">
+          <mxGeometry height="30" width="636" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="z66lALgW-fK6b9CqXL-4-12" parent="z66lALgW-fK6b9CqXL-4-9" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="E: Shell can potentially be escaped, granting access to the entire node" vertex="1">
+          <mxGeometry height="34" width="636" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="z66lALgW-fK6b9CqXL-4-13" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="SPIRE Server" vertex="1">
+          <mxGeometry height="125" width="636.5" x="-1590" y="1239" as="geometry" />
+        </mxCell>
+        <mxCell id="z66lALgW-fK6b9CqXL-4-14" parent="z66lALgW-fK6b9CqXL-4-13" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="S: Credentials can be stolen in order to access the SPIRE server." vertex="1">
+          <mxGeometry height="31" width="636.5" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="z66lALgW-fK6b9CqXL-4-15" parent="z66lALgW-fK6b9CqXL-4-13" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;caret-color: rgba(0, 0, 0, 0);&quot;&gt;T:&amp;nbsp;Using API commands to alter, delete, or add workload registration entries&lt;/span&gt;" vertex="1">
+          <mxGeometry height="30" width="636.5" y="61" as="geometry" />
+        </mxCell>
+        <mxCell id="z66lALgW-fK6b9CqXL-4-16" parent="z66lALgW-fK6b9CqXL-4-13" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="D: Deleting or corrupting the SPIRE Server can prevent SVIDs from being issued" vertex="1">
+          <mxGeometry height="34" width="636.5" y="91" as="geometry" />
+        </mxCell>
+        <mxCell id="z66lALgW-fK6b9CqXL-4-17" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="SPIRE Agent" vertex="1">
+          <mxGeometry height="134" width="634.5" x="-1589" y="1389" as="geometry" />
+        </mxCell>
+        <mxCell id="z66lALgW-fK6b9CqXL-4-18" parent="z66lALgW-fK6b9CqXL-4-17" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="S: A compromised node can be used to impersonate the SPIRE Agent to obtain unauthorized SVIDs" vertex="1">
+          <mxGeometry height="30" width="634.5" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="z66lALgW-fK6b9CqXL-4-19" parent="z66lALgW-fK6b9CqXL-4-17" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="T: The agent Unix socket can be tampered with to intercept or manipulate SVID delivery" vertex="1">
+          <mxGeometry height="30" width="634.5" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="z66lALgW-fK6b9CqXL-4-20" parent="z66lALgW-fK6b9CqXL-4-17" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="R: If logging is not properly configured, repudiation is a risk&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="44" width="634.5" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="z66lALgW-fK6b9CqXL-4-21" parent="1" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Kubernetes secrets&lt;/h1&gt;" vertex="1">
+          <mxGeometry height="41" width="241" x="-660.5" y="-104" as="geometry" />
+        </mxCell>
+        <mxCell id="z66lALgW-fK6b9CqXL-4-22" parent="1" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Spiffe/Spire Workload Identity&lt;/h1&gt;" vertex="1">
+          <mxGeometry height="41" width="357" x="-629" y="682" as="geometry" />
+        </mxCell>
+        <mxCell id="z66lALgW-fK6b9CqXL-4-23" edge="1" parent="1" source="mtP42j5BZ-0bhSF3e_x6-38" style="endArrow=classic;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.75;entryY=1;entryDx=0;entryDy=0;strokeWidth=1;strokeColor=#23445D;" target="mtP42j5BZ-0bhSF3e_x6-37" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="-816" y="1366" as="sourcePoint" />
+            <mxPoint x="-766" y="1316" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="z66lALgW-fK6b9CqXL-4-24" connectable="0" parent="z66lALgW-fK6b9CqXL-4-23" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Attestation" vertex="1">
+          <mxGeometry relative="1" x="-0.2891" y="1" as="geometry">
+            <mxPoint x="1" y="-1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
