@@ -1,0 +1,54 @@
+# Role (namespace scoped). We create a role that can have various permissions
+# In this case, the server needs access to configmaps since the k8s plugin needs to write the trustbundle into the configmap object (the spire-bundle configmap)
+kind: Role
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: spire-server-configmap-role
+  namespace: spire
+rules:
+- apiGroups: [""]
+  resources: ["configmaps"]
+  verbs: ["patch", "get", "list"]
+---
+# We bind the role to the service account that the spire server uses, so that it actually gets these permissions.
+kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: spire-server-configmap-role-binding
+  namespace: spire
+subjects:
+- kind: ServiceAccount
+  name: spire-server
+  namespace: spire
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: spire-server-configmap-role
+---
+# ClusterRole is scoped to the entire cluster, as opposed to a role which is scoped to a namespace.
+# For example, we can see here that the server gets access to "tokenreviews" which is what it uses to verify the validity of the agents psat (projected service account token)
+kind: ClusterRole
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: spire-server-trust-role
+rules:
+- apiGroups: [""]
+  resources: ["pods", "nodes"]
+  verbs: ["get"]
+- apiGroups: ["authentication.k8s.io"]
+  resources: ["tokenreviews"]
+  verbs: ["create"]
+---
+# We also bind this role to the same service account
+kind: ClusterRoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: spire-server-trust-role-binding
+subjects:
+- kind: ServiceAccount
+  name: spire-server
+  namespace: spire
+roleRef:
+  kind: ClusterRole
+  name: spire-server-trust-role
+  apiGroup: rbac.authorization.k8s.io

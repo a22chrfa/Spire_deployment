@@ -1,0 +1,68 @@
+# A StatefulSet is an object that makes the workload run with persistence (storage, name). It is essentially similar to a Deployment in that it tells Kubernetes how to run a workload.
+# StatefulSet, Deployment, and DaemonSet are objects that tell Kubernetes how to run the actual container containing the application in the cluster.
+# There is a bit of information overload here. Essentially, we set some labels for the container, tell it which image (actual application software) to use, how to handle storage, how and where the kubelet should probe the application. We also include the path to server.conf (which was created in the server-configmap)
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: spire-server
+  namespace: spire
+  labels:
+    app: spire-server
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: spire-server
+  serviceName: spire-server
+  template:
+    metadata:
+      namespace: spire
+      labels:
+        app: spire-server
+    spec:
+      serviceAccountName: spire-server
+      securityContext:
+        fsGroup: 1000
+      containers:
+        - name: spire-server
+          image: ghcr.io/spiffe/spire-server:1.11.2
+          args:
+            - -config
+            - /run/spire/config/server.conf
+          ports:
+            - containerPort: 8081
+          volumeMounts:
+            - name: spire-config
+              mountPath: /run/spire/config
+              readOnly: true
+            - name: spire-data
+              mountPath: /run/spire/data
+              readOnly: false
+          livenessProbe:
+            httpGet:
+              path: /live
+              port: 8080
+            failureThreshold: 2
+            initialDelaySeconds: 15
+            periodSeconds: 60
+            timeoutSeconds: 3
+          readinessProbe:
+            httpGet:
+              path: /ready
+              port: 8080
+            initialDelaySeconds: 5
+            periodSeconds: 5
+      volumes:
+        - name: spire-config
+          configMap:
+            name: spire-server
+  volumeClaimTemplates:
+    - metadata:
+        name: spire-data
+        namespace: spire
+      spec:
+        accessModes:
+          - ReadWriteOnce
+        resources:
+          requests:
+            storage: 1Gi

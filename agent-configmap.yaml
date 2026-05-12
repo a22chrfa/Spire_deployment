@@ -1,0 +1,57 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: spire-agent
+  namespace: spire
+data:
+  # This is the same principle as the configmap for the server. It creates an application specific configuration.
+  # the following is stored as an entire string, and commenting inside makes the editor weird, so we write everything here.
+  # The agent block tells the agent how to connect to the spire server
+  # the plugins-block are not kubernetes plugins, they are spire plugins. These handle attestation and key storage
+  # the health_checks is for exposing endpoints that kubernetes can use to check the state of the workload.
+  # We can also see that the server_address is directed at "spire-server". Which is resolved by the dns (thanks to the service we recently set up)
+  agent.conf: |
+    agent {
+      data_dir = "/run/spire"
+      log_level = "DEBUG"
+      server_address = "spire-server"
+      server_port = "8081"
+      socket_path = "/run/spire/sockets/agent.sock"
+      trust_bundle_path = "/run/spire/bundle/bundle.crt"
+      trust_domain = "nonanonymous.org"
+    }
+    plugins {
+      NodeAttestor "k8s_psat" {
+        plugin_data {
+          cluster = "spire-cluster"
+        }
+      }
+
+      KeyManager "memory" {
+        plugin_data {
+        }
+      }
+
+      WorkloadAttestor "k8s" {
+        plugin_data {
+          # Defaults to the secure kubelet port by default.
+          # Minikube does not have a cert in the cluster CA bundle that
+          # can authenticate the kubelet cert, so skip validation.
+          skip_kubelet_verification = true
+          node_name_env = "MY_NODE_NAME"
+        }
+      }
+
+      WorkloadAttestor "unix" {
+          plugin_data {
+          }
+      }
+    }
+
+    health_checks {
+      listener_enabled = true
+      bind_address = "0.0.0.0"
+      bind_port = "8080"
+      live_path = "/live"
+      ready_path = "/ready"
+    }

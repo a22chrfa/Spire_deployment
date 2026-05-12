@@ -1,0 +1,7 @@
+# This tells spire to create a configmap (an object) called spire-bundle.
+# The k8s plugin on the spire server is coded to default to this configmap name
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: spire-bundle
+  namespace: spire

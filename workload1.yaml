@@ -1,0 +1,36 @@
+# This a deployment. Which tells kubernetes how to run the container. Remember that StatefulSet is for persistence, and DaemonSet is to run the workload on every node.
+# By contrast, this does not care about persistence and only runs on the node we choose, or one chosen by kubernetes.
+# Here, we don't care which node it ends up on, and our cluster only has one node.
+# One thing of note is that we define the image here. Workload1:v1 is the one we will actually create from our py-scripts.
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: workload1
+  labels:
+    app: workload1
+spec:
+  selector:
+    matchLabels:
+      app: workload1
+  template:
+    metadata:
+      labels:
+        app: workload1
+    spec:
+      hostPID: true
+      hostNetwork: true
+      dnsPolicy: ClusterFirstWithHostNet
+      serviceAccountName: workload1
+      containers:
+        - name: workload1
+          image: workload1:v1
+          imagePullPolicy: IfNotPresent
+          volumeMounts:
+            - name: spire-agent-socket
+              mountPath: /run/spire/sockets
+              readOnly: true
+      volumes:
+        - name: spire-agent-socket
+          hostPath:
+            path: /run/spire/sockets
+            type: Directory

@@ -1,0 +1,16 @@
+# This creates a service on the server workload by exposing a port and defining protocols etc, used by the agent to contact it.
+# A service in kubernetes handles dns and load balancing. Not that we need balancing now, but the agent will use the name of the server, so the dns is useful.
+apiVersion: v1
+kind: Service
+metadata:
+  name: spire-server
+  namespace: spire
+spec:
+  type: NodePort
+  ports:
+    - name: grpc
+      port: 8081
+      targetPort: 8081
+      protocol: TCP
+  selector:
+    app: spire-server
